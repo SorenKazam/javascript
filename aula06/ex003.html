@@ -16,10 +16,12 @@
     <p>Estou aprendendo JavaScript</p>
     <p>ola <span></span></p>
     <script>
-        var n1 = window.prompt('Digite um numero:')
-        var n2 = window.prompt('Digite outro numero:')
+        // Number.ParseInt(n) = passar de string para inteiro
+        // Number.ParseFloat(n) = passar de string para numero real (com ponto flutuante!)
+        var n1 = Number(window.prompt('Digite um numero:')) // string -> Number
+        var n2 = Number(window.prompt('Digite outro numero:')) // string -> Number
         var s = n1 + n2
-        window.alert(s)
+        window.alert(`A soma entre ${n1} e ${n2} e igual a: ${s}`) // Template String
     </script>
 </body>
 </html>
