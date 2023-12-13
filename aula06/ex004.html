@@ -16,6 +16,9 @@
     <script>
         var nome = window.prompt('Qual e seu nome?')
         document.write(`Seu nome ${nome} tem ${nome.length} letras, em maiusculas fica ${nome.toLocaleUpperCase()} e em minusculas fica ${nome.toLowerCase()} `)
+        var salario = window.prompt('Qual seu salario?')
+        salario.toLocaleString('pt-PT', {style: 'currency', currency: 'EUR'})
+        document.writeln(`O seu salario em Portugal e de ${salario}`) // apenas funciona no nodejs
     </script>
 </body>
 </html>
