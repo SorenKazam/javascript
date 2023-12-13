@@ -11,8 +11,8 @@
 <h2>📖 Links para as playlists do curso!</h2>
 <p>Vou anotando as que ja fiz, estou a fazer e as que ainda nao fiz.</p>
 🍿 Curso Grátis de JavaScript e ECMAScript para Iniciantes: <a href="https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1">Playlist</a><br>
-🔄️ Módulo 01A: Conhecendo o JavaScript<br>
-❌ Módulo 02B: Comandos básicos do JavaScript<br>
+✅ Módulo 01A: Conhecendo o JavaScript<br>
+🔄️ Módulo 02B: Comandos básicos do JavaScript<br>
 ❌ Módulo 03C: Document Object Model<br>
 ❌ Módulo 04D: Condições em JavaScript<br>
 ❌ Módulo 05E: Repetições (laços) em JavaScript<br>
