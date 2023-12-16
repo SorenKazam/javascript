@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+</head>
+<body>
+    <h1>Calc do Soren</h1>
+    <div class="calculator">
+        <label for="itxtn1">Primeiro numero: </label>
+        <input type="number" name="txtn1" id="itxtn1">
+        <label for="itxtn2">Segundo numero: </label>
+        <input type="number" name="txtn2" id="itxtn2">
+        
+        <select name="operadores" id="operators">
+            <option value="" disabled selected>Operador</option>
+            <option value="soma">+</option>
+            <option value="subt">-</option>
+            <option value="divi">/</option>
+            <option value="mult">*</option>
+        </select>
+
+        <input type="button" value="Calcular" id="calc-btn">
+        <span id="res"></span>
+    </div>
+    
+    <script>
+        // get elements
+        console.log('Script started')
+        var txtn1 = document.querySelector('input#itxtn1')
+        var txtn2 = document.querySelector('input#itxtn2')
+        var res = document.querySelector('span#res')
+        var calcBtn = document.getElementById('calc-btn')
+        var operator = document.getElementById('operators')
+
+        // verificar
+        console.log('Localizando elementos...')
+        if (!txtn1 || !txtn2 || !res || !calcBtn || !operator){
+            console.error('Erro ao localizar elementos')
+            if (!txtn1) {console.error('❌ Elemento txtn1 nao localizado')}
+            if (!txtn2) {console.error('❌ Elemento txtn2 nao localizado')}
+            if (!res) {console.error('❌ Elemento res nao localizado')}
+            if (!calc) {console.error('❌ Elemento calc nao localizado')}
+            if (!operator) {console.error('❌ Elemento operator nao localizado')}
+        } else {
+            console.log('✅ Todos os elementos foram encontrados!');
+        }
+
+        calcBtn.addEventListener('click', calc)
+        
+
+
+        function calc() {
+            console.log('calc() function called')
+            n1 = Number(txtn1.value)
+            n2 = Number(txtn2.value)
+            selectedOperator = operator.value
+
+            if (n1 == '' || n2 == ''){
+                res.style.color = 'red';
+                res.textContent = "Nao deixe os campos em branco!";
+            } else if (isNaN(n1) || isNaN(n2)){
+                res.style.color = 'red';
+                res.textContent = 'Apenas numeros!';
+            } else {
+                console.log('✅ Todos os requesitos estao preenchidos');
+                res.textContent = '';
+            }
+
+            switch (selectedOperator) {
+                case '':
+                    res.textContent = 'Selecione um operador!';
+                    break;
+                case 'soma':
+                    var result = n1 + n2;
+                    break;
+                case 'subt':
+                    var result = n1 - n2;
+                    break;
+                case 'divi':
+                    var result = n1 / n2;
+                    break;
+                case 'mult':
+                    var result = n1 * n2;
+                    break;
+                default:
+                    res.style.color = 'red'
+                    res.textContent = 'Operador nao reconhecido!';
+                    return;
+                }
+            
+
+            res.style.color = 'black'
+            res.textContent = 'Resultado: ' + result
+        }
+    </script>
+</body>
+</html>
