@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando numeros!</title>
+    <style>
+        * {
+            font: normal 1em arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <label for="inumero1">Numero 1: </label>
+    <input type="number" name="numero" id="itxtn1" required>
+    <label for="inumero2">Numero 2: </label>
+    <input type="number" name="numero" id="itxtn2" required>
+    <input type="button" value="Somar" id="btn-somar">
+    <br>
+    <div class="res">Resultado</div>
+
+    <script>
+        var btnSomar = document.querySelector('input#btn-somar')
+        btnSomar.addEventListener('click', somar)
+
+        function somar() {
+            // itxtn1 = id texto numero 1
+            var tn1 = window.document.querySelector('input#itxtn1')
+            var tn2 = window.document.querySelector('input#itxtn2')
+
+            if(tn1.value === '' || tn2.value === '') {
+                window.alert('Nao deixe os campos vazios!')
+            } else {
+                var res = window.document.querySelector('div.res')
+                var n1 = Number(tn1.value)
+                var n2 = Number(tn2.value)
+                var s = n1 + n2
+                res.innerHTML = `A soma entre ${n1} e ${n2} é igual a: <strong>${s}</strong>`
+            }
+        }
+
+    </script>
+</body>
+</html>
