@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <noscript>TURN THE JS ON!</noscript>
+</head>
+<body>
+    <h1>Calc do Soren</h1>
+    <div class="calculator">
+        <label for="itxtn1">Primeiro numero: </label>
+        <input type="number" name="txtn1" id="itxtn1">
+        <label for="itxtn2">Segundo numero: </label>
+        <input type="number" name="txtn2" id="itxtn2">
+        
+        <select name="operadores" id="operators">
+            <option value="" disabled selected>Operador</option>
+            <option value="soma">+</option>
+            <option value="subt">-</option>
+            <option value="divi">/</option>
+            <option value="mult">*</option>
+        </select>
+
+        <input type="button" value="Calcular" id="calc-btn">
+        <br>
+        <span id="res"></span>
+    </div>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
