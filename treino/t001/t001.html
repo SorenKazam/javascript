@@ -4,28 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calc</title>
-    <noscript>TURN THE JS ON!</noscript>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <h1>Calc do Soren</h1>
-    <div class="calculator">
-        <label for="itxtn1">Primeiro numero: </label>
-        <input type="number" name="txtn1" id="itxtn1">
-        <label for="itxtn2">Segundo numero: </label>
-        <input type="number" name="txtn2" id="itxtn2">
-        
-        <select name="operadores" id="operators">
-            <option value="" disabled selected>Operador</option>
-            <option value="soma">+</option>
-            <option value="subt">-</option>
-            <option value="divi">/</option>
-            <option value="mult">*</option>
-        </select>
-
-        <input type="button" value="Calcular" id="calc-btn">
-        <br>
-        <span id="res"></span>
-    </div>
+    <section class="calc">
+        <table>
+            <thead>
+                <tr>
+                    <td colspan="4" id="display"><noscript style="color: rgb(139, 0, 0);">! JavaScript is disabled !</noscript></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="btn-action-ac">AC</td>
+                    <td id="btn-op-divi">/</td>
+                    <td id="btn-op-mult">*</td>
+                    <td id="btn-op-subt">-</td>
+                </tr>
+                <tr>
+                    <td id="btn-num-seven"></td>
+                    <td id="btn-num-eight"></td>
+                    <td id="btn-num-nine"></td>
+                    <td rowspan="2" id="btn-op-soma">+</td>
+                </tr>
+                <tr>
+                    <td id="btn-num-four"></td>
+                    <td id="btn-num-five"></td>
+                    <td id="btn-num-six"></td>
+                </tr>
+                <tr>
+                    <td id="btn-num-one"></td>
+                    <td id="btn-num-two"></td>
+                    <td id="btn-num-three"></td>
+                    <td rowspan="2" id="btn-action-enter">Enter</td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="btn-num-zero"></td>
+                    <td id="btn-action-dot">.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
     <script src="scripts/scripts.js"></script>
 </body>
 </html>
