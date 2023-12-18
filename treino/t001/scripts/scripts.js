@@ -103,7 +103,7 @@ function addOperator(operator){
 
 function updateDisplay() {
     if(currentNumber === '89572023121'){
-        window.alert('Welcome DocMods')
+        console.log('EASTER EGG: Welcome DrMods!')
     }
     calcDisplay.textContent = displayNumbers.join(' ') + ' ' + currentNumber
 }
