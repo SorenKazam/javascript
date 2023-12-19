@@ -1,0 +1,33 @@
+/* MOBILE FIRST */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+noscript#noscriptError {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    color: red;
+    background-color: black;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+nav#navBar{
+    width: 100%;
+    background-color: lightseagreen;
+}
+
+button.navigationBar-button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
