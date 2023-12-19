@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantos anos tens</title>
+</head>
+<body>
+    <h1>Quantos anos eu tenho hoje?</h1>
+
+    <form action="javascript:calcular()" id="formulario">
+        <label for="iano">Seu ano de nascimento</label>
+        <input type="number" name="ano" id="iano">
+        <input type="submit" value="Calcular">
+        <span id="output"></span>
+    </form>
+
+    <script>
+        var iano = document.getElementById('iano')
+        var form = document.querySelector('form#formulario')
+        var output = document.querySelector('span#output')
+
+        var anoAtual = new Date().getFullYear()
+
+        iano.min = 1900
+        iano.max = anoAtual
+        iano.value = anoAtual
+
+        iano.addEventListener('change', calcular)
+
+        function calcular(){
+            var inputAno = iano.value
+            console.log(inputAno)
+
+            if(!inputAno || inputAno < 1900 || inputAno > anoAtual) {
+                output.textContent = 'Problema ao calcular a sua idade!'
+            } else {
+                var resultado = (anoAtual - inputAno)
+                if (resultado == 1){
+                    output.textContent = `Voce tem ${resultado} ano.`
+                } else {
+                    output.textContent = `Voce tem ${resultado} anos.`
+                }
+            }
+        }
+    </script>
+</body>
+</html>
