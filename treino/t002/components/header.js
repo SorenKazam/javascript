@@ -1,3 +1,5 @@
+import { navigateTo } from "../engine/router.js"
+
 export function initializeHeader(){
     console.log('Header initialized')
 
@@ -13,6 +15,7 @@ export function initializeHeader(){
 
     // event listeners
     navigationAboutBtn.addEventListener('click', function(){
+        console.log('navigate to about clicked')
         navigateTo('/about')
     })
 
