@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+    <h1>Estrangeiro ou nao</h1>
+    <p>Verificar se voce e estrangeiro ou Portugues</p>
+
+    <label for="ipais">Pais: </label>
+    <input type="text" name="pais" id="ipais" autocomplete="country">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <span id="res"></span>
+
+    <script>
+        function verificar(){
+            var pais = 'portugal';
+            var res = document.querySelector('span#res')
+            var ipais = document.querySelector('input#ipais').value
+            var userPais = ipais.toLowerCase()
+            
+            if (!userPais){
+                res.textContent = 'Nao deixe o campo em branco!'
+            } else {
+                if (userPais == pais){
+                    res.textContent = 'Portugues!'
+                } else {
+                    res.textContent = 'Estrangeiro'
+                }
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
